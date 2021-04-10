@@ -5,7 +5,6 @@
 
 int main(int argc, char ** argv){
     CVIN_Window_Init("CVIN", 1280, 720);
-    CVIN_Window_Background_Color(255, 0, 0, 255);
 
     SDL_Rect temp = { 5, 5, 320, 240 };
     struct Sprite* sprt = CVIN_Sprite_Create("test.png", temp);

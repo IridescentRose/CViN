@@ -15,8 +15,8 @@ void CVIN_Window_Init(const char* title, int width, int height){
     CVIN_Window_Renderer = SDL_CreateRenderer(window, -1, 0);
 }
 
-void CVIN_Window_Background_Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a){
-    SDL_SetRenderDrawColor(CVIN_Window_Renderer, r, g, b, a);
+void CVIN_Window_Background_Color(struct Color c){
+    SDL_SetRenderDrawColor(CVIN_Window_Renderer, c.r, c.g, c.b, c.a);
 }
 
 void CVIN_Window_Clear(){

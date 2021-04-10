@@ -10,7 +10,7 @@ int main(int argc, char ** argv){
     SDL_Rect temp = { 5, 5, 320, 240 };
     struct Sprite* sprt = CVIN_Sprite_Create("test.png", temp);
 
-    struct AudioClip* clip = CVIN_AudioClip_Create("test.wav", true);
+    struct AudioClip* clip = CVIN_AudioClip_Create("music.mp3", true);
     CVIN_AudioClip_Play(clip);
 
     bool quit = false;

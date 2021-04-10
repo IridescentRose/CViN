@@ -15,4 +15,6 @@ void CVIN_Window_Clear();
 void CVIN_Window_Refresh();
 void CVIN_Window_Cleanup();
 
+extern SDL_Renderer* CVIN_Window_Renderer;
+
 #endif

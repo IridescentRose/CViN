@@ -1,11 +1,14 @@
 #include <SDL.h>
 #include "src/WindowContext.h"
+#include "src/Sprite.h"
 #include <stdbool.h>
 
 int main(int argc, char ** argv){
     CVIN_Window_Init("CVIN", 1280, 720);
     CVIN_Window_Background_Color(255, 0, 0, 255);
 
+    SDL_Rect temp = { 5, 5, 320, 240 };
+    struct Sprite* sprt = CVIN_Sprite_Create("test.png", temp);
 
     bool quit = false;
     SDL_Event event;
@@ -19,9 +22,11 @@ int main(int argc, char ** argv){
                 break;
         }
 
+        CVIN_Sprite_Render(sprt);
         CVIN_Window_Refresh();
     }
 
+    CVIN_Sprite_Destroy(sprt);
     CVIN_Window_Cleanup();
     return 0;
 }

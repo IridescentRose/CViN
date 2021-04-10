@@ -2,12 +2,16 @@
 #include "src/WindowContext.h"
 #include "src/Sprite.h"
 #include <stdbool.h>
+#include "src/AudioClip.h"
 
 int main(int argc, char ** argv){
     CVIN_Window_Init("CVIN", 1280, 720);
 
     SDL_Rect temp = { 5, 5, 320, 240 };
     struct Sprite* sprt = CVIN_Sprite_Create("test.png", temp);
+
+    struct AudioClip* clip = CVIN_AudioClip_Create("test.wav", true);
+    CVIN_AudioClip_Play(clip);
 
     bool quit = false;
     SDL_Event event;
@@ -26,6 +30,7 @@ int main(int argc, char ** argv){
     }
 
     CVIN_Sprite_Destroy(sprt);
+    CVIN_AudioClip_Destroy(clip);
     CVIN_Window_Cleanup();
     return 0;
 }

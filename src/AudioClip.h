@@ -32,6 +32,12 @@ struct AudioClip* CVIN_AudioClip_Create(const char* file, bool music);
 void CVIN_AudioClip_Play(struct AudioClip* clip);
 
 /**
+ * Stops an audio clip.
+ * @param clip - Clip to be paused
+ */
+void CVIN_AudioClip_Stop(struct AudioClip* clip);
+
+/**
  * Destroys and frees a clip.
  * @param clip - The clip to be destroyed
  */

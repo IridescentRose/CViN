@@ -6,20 +6,21 @@
 #define CVIN_SPRITE_H
 
 #include "SDL.h"
+#include <stdbool.h>
 
 struct Sprite{
     SDL_Surface* image;
     SDL_Texture* texture;
     SDL_Rect rect;
+    bool isShown;
 };
 
 /**
  * Creates a brand new sprite
  * @param file - Image file to load. Must be PNG, JPG, WEBP, or TIF
- * @param rect - Rectangle that defines X/Y and W/H
  * @return - Brand new sprite.
  */
-struct Sprite* CVIN_Sprite_Create(const char* file, SDL_Rect rect);
+struct Sprite* CVIN_Sprite_Create(const char* file);
 
 /**
  * Draws a sprite onto the screen

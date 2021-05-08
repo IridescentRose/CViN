@@ -27,6 +27,15 @@ void CVIN_AudioClip_Play(struct AudioClip* clip){
     }
 }
 
+void CVIN_AudioClip_Stop(struct AudioClip* clip){
+    if(clip->music){
+        Mix_FadeOutMusic(200);
+        SDL_Delay(200);
+    }else{
+        Mix_Pause(-1);
+    }
+}
+
 void CVIN_AudioClip_Destroy(struct AudioClip* clip){
     if(clip->music){
         Mix_FreeMusic(clip->music);

@@ -5,7 +5,7 @@
 #include "WindowContext.h"
 #include "Sprite.h"
 
-struct Sprite* CVIN_Sprite_Create(const char* file, SDL_Rect rect) {
+struct Sprite* CVIN_Sprite_Create(const char* file) {
     struct Sprite* sprite = calloc(1, sizeof(struct Sprite));
 
     sprite->image = IMG_Load(file);
@@ -14,6 +14,7 @@ struct Sprite* CVIN_Sprite_Create(const char* file, SDL_Rect rect) {
         printf("ERROR: Image %s could not be loaded!\n", file);
         exit(-1);
     }
+    sprite->isShown = false;
 
     sprite->texture = SDL_CreateTextureFromSurface(CVIN_Window_Renderer, sprite->image);
 
@@ -22,7 +23,10 @@ struct Sprite* CVIN_Sprite_Create(const char* file, SDL_Rect rect) {
         exit(-1);
     }
 
-    sprite->rect = rect;
+    sprite->rect.x = 0;
+    sprite->rect.y = 0;
+    sprite->rect.w = sprite->image->w;
+    sprite->rect.h = sprite->image->h;
     return sprite;
 }
 

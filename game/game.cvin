@@ -1,0 +1,32 @@
+//TEST CVIN FILE
+//You can use comments with //
+//These comments will not be tokenized
+//The CVIN scripting language is very simple
+//All defined tokens can be used with the appropriate language commands
+
+//Define our variables. It doesn't have to be put into one block, but it will be loaded as if it was one block.
+//You can mix these in with commands if desired.
+define Background1 as SPRITE with FILE "assets/bg.jpg"
+define shiro as SPRITE with FILE "assets/Shiro.tiff"
+define music as MUSIC with FILE "assets/music.mp3"
+define sfx as SOUND with FILE "assets/test.wav"
+define Shiro as CHARACTER with SPRITE shiro
+
+
+//Feel free to play around!
+show Background1 as BG
+play music
+show Shiro at 0.5 0.5
+Shiro says "Hello, and welcome to CViN! A visual novel engine that is easy to learn and use!"
+Shiro says "You can do plenty of different things with this engine, including making your own scenes, characters, and stories!"
+Shiro says "It's very simple to understand, and you don't need programming experience to write a game!"
+Shiro says "Doesn't that sound fun?"
+Shiro says "While the engine is a little bit bare-bones, you can do all the basics with just some simple commands!"
+Shiro says "Check the game.cvin file in the game directory!"
+stop music
+play sfx
+Shiro says "Looks like it's time to say goodbye!"
+hide Shiro
+hide Background1
+Shiro says "I'll see you soon!"
+exit

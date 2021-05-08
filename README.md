@@ -1,7 +1,7 @@
 <h1 align="center">CViN</h1>
 <p align="center">The C Visual Novel Engine</p>
 
-![Screenshot of a CVIN Demo](SS.png "a title")
+![Screenshot of a CVIN Demo](SS.png "Shiro explains why CVIN is the best!")
 
 ## Features
 

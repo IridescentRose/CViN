@@ -1,6 +1,8 @@
 <h1 align="center">CViN</h1>
 <p align="center">The C Visual Novel Engine</p>
 
+![Screenshot of a CVIN Demo](SS.png "a title")
+
 ## Features
 
 * Multiplatform: Works on Windows, Mac OS X, and Linux! It is easiest to use on Linux.
